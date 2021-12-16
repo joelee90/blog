@@ -1,13 +1,39 @@
 ---
-title: My Test Post!
-date: "2015-05-06T23:46:37.121Z"
+title: TypeScript Introduction
+date: "2021-12-16"
 ---
 
-Wow! I love blogging so much already.
+Example of converting js to ts.<br/>
+실행 : tsc filename.ts
 
-Did you know that "despite its name, salted duck eggs can also be made from
-chicken eggs, though the taste and texture will be somewhat different, and the
-egg yolk will be less rich."?
-([Wikipedia Link](https://en.wikipedia.org/wiki/Salted_duck_egg))
+```
+JavaScript
 
-Yeah, I didn't either.
+var button = document.querySelector('button');
+var input1 = document.getElementById('num1');
+var input2 = document.getElementById('num2');
+function add(num1, num2) {
+    return num1 + num2;
+}
+button.addEventListener('click', function () {
+    console.log(add(+input1.value, +input2.value));
+});
+
+```
+
+```
+TypeScript
+
+const button = document.querySelector('button');
+const input1 = document.getElementById('num1')! as HTMLInputElement;
+const input2 = document.getElementById('num2')! as HTMLInputElement;
+
+function add(num1: number, num2: number) {
+  return num1 + num2;
+}
+
+button.addEventListener('click', function () {
+  console.log(add(+input1.value, +input2.value));
+});
+
+```
