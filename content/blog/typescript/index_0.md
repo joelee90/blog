@@ -3,8 +3,12 @@ title: TypeScript Introduction
 date: "2021-12-16"
 ---
 
-Example of converting js to ts.<br/>
+Example of converting JavaScript to TypeScript.<br/>
 실행 : tsc filename.ts
+
+```
+# TypeScript
+```
 
 ```
 JavaScript
