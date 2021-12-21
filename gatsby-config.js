@@ -8,7 +8,7 @@ module.exports = {
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `Jonghyeok Lee`,
       linkedIn: `Jonghyeok Lee`,
       github: `Jonghyeok Lee`,
     },
@@ -128,5 +128,12 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Nanum Gothic, sans-serif`],
+        display: "swap",
+      },
+    },
   ],
 }
