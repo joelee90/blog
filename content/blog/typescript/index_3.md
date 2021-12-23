@@ -40,3 +40,30 @@ addAndHandle(10, 20, (result) => {
 ```
 
 Callback functions can return something, even if the argument on which they're passed does NOT expect a return value.
+
+#### [The "unknown" Type]
+
+```
+let userInput: unknown;
+let userName: string;
+
+userInput = 5;
+userInput: 'Joe';
+
+if(type of userInput === 'string') {
+    userName = userInput;
+}
+
+```
+
+userInput could technically hold any value because its unknown.
+
+#### [The "never" Type]
+
+```
+function generateError(message: string, code: number): never {
+    throw {message: message, errorCode: code}
+}
+
+generateError('An Error!', 500)
+```
