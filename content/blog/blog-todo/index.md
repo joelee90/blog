@@ -10,10 +10,10 @@ date: "2021-12-20"
 ```
 [] Left Menu
 [] # hashtag
-[] font
+[v] font
 ```
 
 ```
 TypeScript - Udemy
-[] Course Outline
+[v] Course Outline
 ```
