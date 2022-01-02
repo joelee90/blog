@@ -131,7 +131,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Nanum Gothic, sans-serif`],
+        fonts: [`Nanum Gothic`],
         display: "swap",
       },
     },
