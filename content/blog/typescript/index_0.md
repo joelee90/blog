@@ -1,6 +1,7 @@
 ---
 title: TypeScript Introduction
 date: "2021-12-16"
+tags: typescript
 ---
 
 Example of converting JavaScript to TypeScript.<br/>

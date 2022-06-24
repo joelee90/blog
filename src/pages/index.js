@@ -31,8 +31,8 @@ const BlogIndex = ({ data, location }) => {
       <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
-          // const title = post.frontmatter.title || post.fields.slug
           const title = post.frontmatter.title || ""
+          const tags = post.frontmatter.tags || ""
 
           return (
             <li key={post.fields.slug}>
@@ -49,6 +49,8 @@ const BlogIndex = ({ data, location }) => {
                   </h2>
                   <small>{post.frontmatter.date}</small>
                 </header>
+                <div className="list-tags">{tags && "#" + tags}</div>
+
                 <section>
                   <p
                     dangerouslySetInnerHTML={{
@@ -85,6 +87,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          tags
         }
       }
     }

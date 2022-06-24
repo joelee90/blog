@@ -1,12 +1,8 @@
 ---
 title: JavaScript Execution Context
 date: "2022-01-09"
-tags: ["javascript"]
+tags: javascript
 ---
-
-```
-# JavaScript
-```
 
 **Execution Context** is an abstract concept of an environment where JavaScript code is evaluated and executed. </br>
 JavaScript runs inside an execution context.
