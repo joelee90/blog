@@ -5,7 +5,6 @@
   --maxWidth-xs: 20rem;
   --maxWidth-sm: 24rem;
   --maxWidth-md: 28rem;
-  --maxWidth-lg: 32rem;
   --maxWidth-xl: 36rem;
   --maxWidth-2xl: 42rem;
   --maxWidth-3xl: 48rem;
@@ -253,6 +252,10 @@ a:focus {
 
 .global-header {
   margin-bottom: var(--spacing-12);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;  
 }
 
 .main-heading {
@@ -331,4 +334,23 @@ a:focus {
   ol {
     list-style-position: inside;
   }
+}
+
+/* custom css */
+
+.gatsby-side-container {
+  display: flex;
+  flex-direction: row;  
+}
+
+.side-bar-menu {   
+  height: 100vh;  
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  right: 0;  
+  font-size: var(--fontSize-4);  
+  font-family: var(--font-heading);
+  padding: var(--spacing-5) var(--spacing-5);
 }

@@ -1,6 +1,7 @@
 ---
 title: JavaScript Execution Context
 date: "2022-01-09"
+tags: ["javascript"]
 ---
 
 ```
