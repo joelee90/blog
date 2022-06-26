@@ -5,7 +5,7 @@ import SideBar from "../components/side-bar"
 import SideBarMenu from "../components/side-bar-menu"
 
 const Tags = ({ data, location }) => {
-  console.log("data", data)
+  console.log("Tags data", data)
   const tags = data.allMarkdownRemark.nodes
 
   const [openSideBar, openSideBarSet] = React.useState(false)
@@ -21,11 +21,16 @@ const Tags = ({ data, location }) => {
           openSideBarSet={openSideBarSet}
         />
       ) : (
-        <div>
+        <div className="tag-list">
           {tags.map(tag => {
             const tags = tag.frontmatter.tags || ""
-            // console.log("tags", tags)
-            return <div key={tag.fields.slug}>{tags}</div>
+            if (tags !== "") {
+              return (
+                <div className="tag-item" key={tag.fields.slug}>
+                  # {tags}
+                </div>
+              )
+            }
           })}
         </div>
       )}

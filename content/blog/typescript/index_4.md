@@ -1,11 +1,8 @@
 ---
 title: TypeScript Compiler
 date: "2021-12-29"
+tags: typescript
 ---
-
-```
-# TypeScript
-```
 
 ### [tsconfig.json]
 

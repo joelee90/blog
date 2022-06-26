@@ -1,11 +1,8 @@
 ---
 title: Next-generation JavaScript & TypeScript
 date: "2021-12-29"
+tags: typescript
 ---
-
-```
-# TypeScript
-```
 
 const: cannot be changed.
 let: can be changed.

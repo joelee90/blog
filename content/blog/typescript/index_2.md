@@ -1,11 +1,8 @@
 ---
 title: TypeScript Types - 1
 date: "2021-12-20"
+tags: typescript
 ---
-
-```
-# TypeScript
-```
 
 ### [Using Types]
 

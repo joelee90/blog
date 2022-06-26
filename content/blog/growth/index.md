@@ -1,11 +1,8 @@
 ---
 title: 성장하는 프론트엔드 개발자되기
 date: "2022-01-05"
+tags: article
 ---
-
-```
-# ARTICLE
-```
 
 Wanted Live Talk #20 Summary<br/>
 출처: wanted.co.kr/events

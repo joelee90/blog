@@ -1,11 +1,8 @@
 ---
 title: TypeScript Types - 2
 date: "2021-12-21"
+tags: typescript
 ---
-
-```
-# TypeScript
-```
 
 #### [Function Return Types & 'void']
 

@@ -1,11 +1,8 @@
 ---
 title: Blog Todo List
 date: "2021-12-20"
+tags: Blog
 ---
-
-```
-# Blog
-```
 
 ```
 [] Left Menu

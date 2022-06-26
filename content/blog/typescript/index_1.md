@@ -4,10 +4,6 @@ date: "2021-12-16"
 tags: typescript
 ---
 
-```
-# TypeScript
-```
-
 #### [Course Outline]
 
 - TypeScript Basics, Compiler & Configuration Deep Dive
