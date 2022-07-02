@@ -1,12 +1,43 @@
 import * as React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import SideBar from "../components/side-bar"
 import SideBarMenu from "../components/side-bar-menu"
 
 const Tags = ({ data, location }) => {
-  console.log("Tags data", data)
+  // console.log("Tags data", data)
   const tags = data.allMarkdownRemark.nodes
+  let key = "tags"
+  const getTagList = tags.map(tagItem => {
+    if (tagItem.frontmatter.tags !== null && tagItem.frontmatter.tags !== "") {
+      return tagItem.frontmatter
+    }
+  })
+
+  const findOcc = (array, key) => {
+    let tagList = []
+    array.forEach(i => {
+      if (i !== undefined) {
+        if (
+          tagList.some(val => {
+            return val[key] === i[key]
+          })
+        ) {
+          tagList.forEach(k => {
+            if (k[key] === i[key]) {
+              k["occurrence"]++
+            }
+          })
+        } else {
+          let a = {}
+          a[key] = i[key]
+          a["occurrence"] = 1
+          tagList.push(a)
+        }
+      }
+    })
+    return tagList
+  }
+  const tagListArray = findOcc(getTagList, key)
 
   const [openSideBar, openSideBarSet] = React.useState(false)
   return (
@@ -22,15 +53,12 @@ const Tags = ({ data, location }) => {
         />
       ) : (
         <div className="tag-list">
-          {tags.map(tag => {
-            const tags = tag.frontmatter.tags || ""
-            if (tags !== "") {
-              return (
-                <div className="tag-item" key={tag.fields.slug}>
-                  # {tags}
-                </div>
-              )
-            }
+          {tagListArray.map((tag, idx) => {
+            return (
+              <div className="tag-item" key={idx}>
+                # {tag.tags} ({tag.occurrence})
+              </div>
+            )
           })}
         </div>
       )}
