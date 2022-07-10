@@ -15,7 +15,7 @@ const SideBarMenu = ({ openSideBar, openSideBarSet }) => {
         </Link>
       </div>
       <div>
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link to="/about" style={{ textDecoration: "none" }}>
           About
         </Link>
       </div>

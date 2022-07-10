@@ -6,9 +6,8 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const BlogPostTemplate = ({ data, location }) => {
-  console.log("data)))))))))))", data)
   const post = data.markdownRemark
-  const tags = data.markdownRemark.frontmatter.tags
+  const tags = data.markdownRemark.frontmatter.tags || ""
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
 
@@ -26,7 +25,7 @@ const BlogPostTemplate = ({ data, location }) => {
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
-          <div className="list-tags">{tags && "#" + tags}</div>
+          {tags !== "" && <div className="list-tags">{tags && "#" + tags}</div>}
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}

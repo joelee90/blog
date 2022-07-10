@@ -360,6 +360,11 @@ a:focus {
   font-family: var(--font-heading);
   color: var(--color-primary);
   margin-bottom: var(--spacing-2);  
+  border: 1px solid;
+  border-color: var(--color-primary);
+  border-radius: var(--spacing-2);
+  width: fit-content;
+  padding: var(--spacing-1);
 }
 
 .tag-list {

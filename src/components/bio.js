@@ -47,15 +47,49 @@ const Bio = () => {
           Written by <strong>{author.name}</strong> {author?.summary || null}
           {` `}
           <br />
-          <a href={"https://github.com/joelee90"} target="_blank">
+          <StaticImage
+            formats={["AUTO", "WEBP", "AVIF"]}
+            src="../images/GitHub-Mark-64px.png"
+            width={20}
+            height={20}
+            quality={95}
+          />
+          <a
+            href={"https://github.com/joelee90"}
+            target="_blank"
+            style={{ marginLeft: 2, textDecoration: "none" }}
+          >
             Github
           </a>
           <br />
+          <StaticImage
+            formats={["AUTO", "WEBP", "AVIF"]}
+            src="../images/LI-In-Bug.png"
+            width={20}
+            height={20}
+            quality={95}
+          />
           <a
             href={"https://www.linkedin.com/in/jonghyeoklee90"}
             target="_blank"
+            style={{ marginLeft: 2, textDecoration: "none" }}
           >
             LinkedIn
+          </a>
+          <br />
+          <StaticImage
+            formats={["AUTO", "WEBP", "AVIF"]}
+            src="../images/logo-twitter.png"
+            width={20}
+            height={20}
+            quality={95}
+          />
+          <a
+            href={"https://twitter.com/jhl_90"}
+            target="_blank"
+            style={{ marginLeft: 2, textDecoration: "none" }}
+          >
+            Twitter
           </a>
         </p>
       )}
